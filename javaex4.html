@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Vowel counter</title>
+</head>    
+<body>
+    <form>
+    <center><h1> Vowel Header</h1></center>
+    <center><div><input type="text" id="myText" size=80> </div><br><Br>
+    <button id="mybutton" onclick="validate(); reset()">Count Vowels</button></center>   
+</form>
+</body>
+<script>
+    var a=0;
+    function validate(){
+    var myText = document.getElementById("myText").value;
+    if(myText==""){
+        alert("Enter something");
+        return null;
+    }
+    
+     for(var i=0;i<=myText.length;i++){
+        if(myText[i]=="a" || myText[i]=="e" || myText[i]=="i" || myText[i]=="o" || myText[i]=="u" ){
+            a++;
+        }
+     }
+     if(a==0){
+            alert("There are no vowels present");
+        }
+        else{
+            alert("There are " + a + " vowels in the text");
+        }
+
+    }
+</script>
+</html>
